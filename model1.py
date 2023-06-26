@@ -4,8 +4,9 @@
 # In[3]:
 
 
-import tensorflow as tf
-from tensorflow import keras
+#import tensorflow as tf
+#from tensorflow import keras
+import keras
 from keras.optimizers import Nadam
 from keras.preprocessing.image import ImageDataGenerator
 import scipy
