@@ -4,8 +4,7 @@
 # In[3]:
 
 
-#import tensorflow as tf
-#from tensorflow import keras
+
 import keras
 from keras.optimizers import Nadam
 from keras.preprocessing.image import ImageDataGenerator
@@ -15,18 +14,18 @@ import scipy
 # In[4]:
 
 
-model = tf.keras.models.Sequential([
-    tf.keras.layers.Conv2D(16, (3,3), activation='relu', input_shape=(300, 300, 3)),
-    tf.keras.layers.MaxPooling2D(2, 2),
-    tf.keras.layers.Conv2D(32, (3,3), activation='relu'),
-    tf.keras.layers.MaxPooling2D(2,2),
-    tf.keras.layers.Conv2D(64, (3,3), activation='relu'),
-    tf.keras.layers.MaxPooling2D(2,2),
+model = keras.models.Sequential([
+    keras.layers.Conv2D(16, (3,3), activation='relu', input_shape=(300, 300, 3)),
+    keras.layers.MaxPooling2D(2, 2),
+    keras.layers.Conv2D(32, (3,3), activation='relu'),
+    keras.layers.MaxPooling2D(2,2),
+    keras.layers.Conv2D(64, (3,3), activation='relu'),
+    keras.layers.MaxPooling2D(2,2),
     # Flatten the results to feed into a DNN
-    tf.keras.layers.Flatten(),
+    keras.layers.Flatten(),
     # 512 neuron hidden layer
-    tf.keras.layers.Dense(512, activation='relu'),
-    tf.keras.layers.Dense(7, activation='softmax')])
+    keras.layers.Dense(512, activation='relu'),
+    keras.layers.Dense(7, activation='softmax')])
 model.compile(loss='categorical_crossentropy',optimizer='Nadam',metrics=['accuracy'])
     # All images will be rescaled by 1./255
 train_datagen = ImageDataGenerator(rescale=1./255,)
