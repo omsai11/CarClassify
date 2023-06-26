@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARS</title>
+</head>
+
+<body style="background-color:#1F2833;">
+    <div class="container">
+        <div style=" width:300px; border:15px solid rgb(230, 27, 60); padding:50px;margin:auto ">
+            <div class="card" style=" color:aliceblue">
+                <div class="card-body">
+                    {% if result==0 %}
+                    <h1 class="card-title">Audi Car</h1>
+                    {% elif result==1 %}
+                    <h1 class="card-title">Hyundai Creta Car</h1>
+                    {% elif result==2 %}
+                    <h1 class="card-title">Mahindra Scorpio Car</h1>
+                    {% elif result==3 %}
+                    <h1 class="card-title">Rolls Royce Car</h1>
+                    {% elif result==4 %}
+                    <h1 class="card-title">Swift Car</h1>
+                    {% elif result==5 %}
+                    <h1 class="card-title">Tata Safari Car</h1>
+                    {% else %}
+                    <h1 class="card-title">Toyota Innova Car</h1>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
