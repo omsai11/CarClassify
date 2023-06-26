@@ -81,7 +81,10 @@ stack-data==0.6.2
 tensorboard==2.10.1
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow==2.10.1
+tensorflow-gpu==2.6.0
+tensorflow-addons==0.14.0
+cuda==11.4
+cudnn==8.2
 tensorflow-estimator==2.10.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.3.0
